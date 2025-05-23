@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maths - Toppers ZOne</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .folder {
+      margin-bottom: 18px;
+      border: 2px solid #0e3cd3;
+      border-radius: 8px;
+      padding: 14px;
+      background: #018dff;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(56, 142, 60, 0.08);
+    }
+    .folder:hover {
+      background: #063faa;
+      box-shadow: 0 4px 16px rgba(56, 142, 60, 0.15);
+    }
+    .folder-title {
+      font-weight: bold;
+      font-size: 1.15em;
+      margin-bottom: 4px;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+    }
+    .btn {
+      background: #19e923;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 6px;
+      margin-top: 2px;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #16701c;
+    }
+    .back-btn {
+      background: #e53935;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      margin-bottom: 18px;
+      cursor: pointer;
+    }
+    .folder-page {
+      display: none;
+      animation: fadeIn 0.3s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">Maths Quizzes</div>
+
+  <button class="back-btn" onclick="window.location.href='../index.html'">← Go Back</button>
+
+  <div class="menu" id="main-menu">
+    <a href="https://forms.gle/PGE7BMHu24taK1MVA" class="folder" target="_blank" style="text-decoration:none;">
+      <div class="folder-title">Polynomials</div>
+    </a>
+    <!-- Add more folders for other topics if needed -->
+  </div>
+
+  <!-- Remove the Algebra Page and related script logic -->
+  <script>
+    // No folder navigation needed anymore
+  </script>
+</body>
+</html>
