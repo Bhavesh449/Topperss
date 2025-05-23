@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Social Science Quizzes</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .folder {
+      margin-bottom: 18px;
+      border: 2px solid #c62828;
+      border-radius: 8px;
+      padding: 14px;
+      background: #ffeaea;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(198, 40, 40, 0.08);
+    }
+    .folder:hover {
+      background: #ffcdd2;
+      box-shadow: 0 4px 16px rgba(198, 40, 40, 0.15);
+    }
+    .folder-title {
+      font-weight: bold;
+      font-size: 1.15em;
+      margin-bottom: 4px;
+      color: #c62828;
+      letter-spacing: 0.5px;
+    }
+    .btn {
+      background: #c62828;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 6px;
+      margin-top: 2px;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #8e0000;
+    }
+    .eco-link {
+      background: #9ec008 !important;
+      color: #fff !important;
+    }
+    .eco-link:hover {
+      background: #65ad06 !important;
+    }
+    .geo-link {
+      background: #07d407 !important;
+      color: #fff !important;
+    }
+    .geo-link:hover {
+      background: #51ac08 !important;
+    }
+    .civ-link {
+      background: #dbdf12 !important;
+      color: #fff !important;
+    }
+    .civ-link:hover {
+      background: #cdf008 !important;
+    }
+    .hist-link {
+      background: #ad1457 !important;
+      color: #fff !important;
+    }
+    .hist-link:hover {
+      background: #78002e !important;
+    }
+    .back-btn {
+      background: #e53935;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      margin-bottom: 18px;
+      cursor: pointer;
+    }
+    .folder-page {
+      display: none;
+      animation: fadeIn 0.3s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">Social Science Quizzes</div>
+
+  <button class="back-btn" onclick="window.location.href='../index.html'">← Go Back</button>
+
+  <div class="menu" id="main-menu">
+    <div class="folder" onclick="openFolder('economics')">
+      <div class="folder-title">Economics</div>
+    </div>
+    <div class="folder" onclick="openFolder('geography')">
+      <div class="folder-title">Geography</div>
+    </div>
+    <div class="folder" onclick="openFolder('civics')">
+      <div class="folder-title">Civics</div>
+    </div>
+    <div class="folder" onclick="openFolder('history')">
+      <div class="folder-title">History</div>
+    </div>
+  </div>
+
+  <!-- Economics Page -->
+  <div class="folder-page" id="economics-page">
+    <button class="back-btn" onclick="goBack()">← Go Back</button>
+    <h2>Economics</h2>
+    <a href="https://forms.gle/QJ4kJjD7eHYoy2TG6" class="btn eco-link" target="_blank">Development</a>
+    <!-- Add Economics quizzes here, use class="btn eco-link" for yellow color -->
+  </div>
+
+  <!-- Geography Page -->
+  <div class="folder-page" id="geography-page">
+    <button class="back-btn" onclick="goBack()">← Go Back</button>
+    <h2>Geography</h2>
+    <a href="https://forms.gle/hby4FBNAtBpFk1v49" class="btn geo-link" target="_blank">Resources and Development</a>
+    <!-- Add more Geography quizzes here, use class="btn geo-link" for blue color -->
+  </div>
+
+  <!-- Civics Page -->
+  <div class="folder-page" id="civics-page">
+    <button class="back-btn" onclick="goBack()">← Go Back</button>
+    <h2>Civics</h2>
+    <a href="https://forms.office.com/r/JEe66ehqkK" class="btn civ-link" target="_blank">Power Sharing</a>
+    <div style="font-size:1.1em; color:#888; margin-top:18px;">Coming Soon</div>
+    <!-- Add Civics quizzes here, use class="btn civ-link" for green color -->
+  </div>
+
+  <!-- History Page -->
+  <div class="folder-page" id="history-page">
+    <button class="back-btn" onclick="goBack()">← Go Back</button>
+    <h2>History</h2>
+    <div style="font-size:1.1em; color:#888; margin-top:18px;">Coming Soon</div>
+    <!-- Add more History quizzes here, use class="btn hist-link" for pink color -->
+  </div>
+
+  <script>
+    function openFolder(folder) {
+      document.getElementById('main-menu').style.display = 'none';
+      document.getElementById(folder + '-page').style.display = 'block';
+    }
+    function goBack() {
+      document.getElementById('main-menu').style.display = 'block';
+      document.querySelectorAll('.folder-page').forEach(page => page.style.display = 'none');
+    }
+  </script>
+</body>
+</html>
