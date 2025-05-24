@@ -1,42 +1,80 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Toppers ZOne</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduCart Class 10 Question Banks</title>
   <style>
-    .books-menu .btn {
-      background: #e53935;
-      color: #fff;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 4px;
-      text-decoration: none;
-      display: inline-block;
-      margin-bottom: 6px;
-      margin-top: 2px;
-      transition: background 0.2s;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      text-align: center;
+      padding: 20px;
     }
-    .books-menu .btn:hover {
-      background: #b71c1c;
+    .header {
+      margin-bottom: 30px;
+    }
+    .header img {
+      max-width: 200px;
+    }
+    .books-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .book {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 300px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s;
+    }
+    .book:hover {
+      transform: scale(1.02);
+    }
+    .book img {
+      width: 60%;
+      height: auto;
+      margin-top: 10px;
+    }
+    .book-title {
+      font-weight: bold;
+      font-size: 16px;
+      padding: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="header" style="display:flex; align-items:center; gap:12px;">
-    <img src="../Logo.jpg" alt="Logo" style="height:40px; width:auto; border-radius:6px; box-shadow:0 1px 4px #0002;">
-    <span>Toppers ZOne</span>
+
+  <div class="header">
+    <img src="educart-logo.png" alt="EduCart Logo">
   </div>
 
-  <section style="text-align:center; margin: 24px 0 10px 0;">
-    <h2 style="font-size:1.4em; font-weight:500; margin-bottom:16px;">My Quizzes</h2>
-    <div class="menu">
-      <a href="science.html" class="btn">Science</a>
-      <a href="maths.html" class="btn">Maths</a>
-      <a href="sst.html" class="btn">Social Science</a>
-    </div>
-  </section>
+  <h2 style="font-size: 1.4em; font-weight: 500; margin-bottom: 20px;">My Books</h2>
+
+  <div class="books-container">
+    <!-- ✅ Linked to Maths PDF -->
+    <a href="Educart Maths QB(2024-25).pdf" class="book" target="_blank">
+      <img src="maths-thumbnail.jpg" alt="Mathematics Question Bank">
+      <div class="book-title">Maths Question Bank (2024-25)</div>
+    </a>
+
+    <!-- ✅ Linked to Science PDF -->
+    <a href="Educart Science QB(2024-25).pdf" class="book" target="_blank">
+      <img src="science-thumbnail.jpg" alt="Science Question Bank">
+      <div class="book-title">Science Question Bank (2024-25)</div>
+    </a>
+
+    <!-- ✅ Linked to Social Science PDF -->
+    <a href="Educart SST QB(2024-25).pdf" class="book" target="_blank">
+      <img src="sst-thumbnail.jpg" alt="Social Science Question Bank">
+      <div class="book-title">Social Science Question Bank (2024-25)</div>
+    </a>
+  </div>
+
 </body>
 </html>
